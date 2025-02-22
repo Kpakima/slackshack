@@ -1,0 +1,29 @@
+@mixin centerContainer {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
+@mixin bp-largest {
+  @media only screen and (max-width: 75em) {
+    @content;
+  }
+}
+
+@mixin bp-large {
+  @media only screen and (max-width: 56.3em) {
+    @content;
+  }
+}
+
+@mixin bp-medium {
+  @media only screen and (max-width: 42.2em) {
+    @content;
+  }
+}
+
+@mixin bp-small {
+  @media only screen and (max-width: 25em) {
+    @content;
+  }
+}

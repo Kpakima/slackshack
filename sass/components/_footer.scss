@@ -1,0 +1,230 @@
+.footer {
+  padding: 12rem 0rem;
+  background-color: $color-grey-light-1;
+
+  @include bp-medium {
+    padding: 7rem 0rem;
+  }
+
+  &__subscription-container {
+    @include centerContainer;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    padding-bottom: 6.5rem;
+    border-bottom: 1px solid $color-grey-light-3;
+
+    @include bp-medium {
+      grid-template-columns: 1fr;
+      grid-gap: 4rem;
+    }
+  }
+
+  &__subscription-wrap {
+    display: flex;
+    gap: 1.2rem;
+
+    @include bp-medium {
+      flex-direction: column;
+    }
+  }
+
+  &__subscription-title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    font-family: $font-heading;
+    font-style: italic;
+    line-height: 1;
+  }
+
+  &__subscription-text {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+
+  &__subscription-info {
+    flex: 0 0 30%;
+  }
+
+  &__subscription-form {
+    flex: 0 0 70%;
+    display: flex;
+    align-items: center;
+
+    @include bp-largest {
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+  }
+
+  &__subscription-input {
+    flex: 0 0 70%;
+    font-size: 1.7rem;
+    font-weight: 400;
+    font-family: inherit;
+    border: none;
+    outline: none;
+    border-radius: 100px;
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2rem 6rem rgba($color-black, 0.1);
+
+    @include bp-small {
+      flex: 0 0 100%;
+    }
+  }
+
+  &__subscription-input:invalid:focus {
+    outline: 1px solid $color-primary;
+  }
+
+  &__subscription-input::placeholder {
+    color: $color-grey-dark-1;
+  }
+
+  &__subscription-btn {
+    font-size: 1.7rem;
+    font-weight: 400;
+    background-color: $color-grey-dark-3;
+    color: $color-white;
+    padding: 1.2rem 4rem;
+    border: none;
+    border-radius: 100px;
+    box-shadow: 0 2rem 6rem rgba($color-black, 0.1);
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    @include bp-small {
+      flex: 0 0 100%;
+    }
+  }
+
+  &__subscription-btn:hover,
+  &__suscription-btn:active {
+    background-color: darken($color-grey-dark-3, 10%);
+  }
+
+  &__container {
+    @include centerContainer;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 6rem;
+    padding-top: 6.5rem;
+
+    @include bp-large {
+      grid-row-gap: 9rem;
+      grid-column: 4rem;
+    }
+  }
+
+  &__about-text {
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 3rem;
+  }
+
+  &__book-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+
+    &--heading {
+      display: block;
+      font-size: 1.6rem;
+      line-height: 1;
+      font-weight: 600;
+      font-style: italic;
+    }
+
+    &--number {
+      font-size: 1.6rem;
+      line-height: 1;
+      font-weight: 400;
+      display: block;
+      color: $color-primary;
+    }
+  }
+
+  &__opening-hours {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+
+    &--heading {
+      display: block;
+      font-size: 1.6rem;
+      line-height: 1;
+      font-weight: 600;
+      font-style: italic;
+    }
+
+    &--hours {
+      font-size: 1.6rem;
+      line-height: 1;
+      font-weight: 400;
+      display: block;
+      color: $color-primary;
+    }
+  }
+
+  &__heading {
+    font-size: 2.4rem;
+    font-weight: 600;
+    font-family: $font-heading;
+    font-style: italic;
+    line-height: 1;
+    margin-bottom: 3.5rem;
+  }
+
+  &__nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__nav-link:link,
+  &__nav-link:visited {
+    display: block;
+    text-decoration: none;
+    color: $color-grey-dark-3;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  &__nav-link:hover,
+  &__nav-link:visited {
+    transform: translateX(1rem);
+  }
+
+  %contact-common {
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+
+  &__address-text {
+    @extend %contact-common;
+    margin-bottom: 2rem;
+  }
+
+  &__phone-number {
+    @extend %contact-common;
+    margin-bottom: 2rem;
+  }
+
+  &__email-address:link,
+  &__email-address:visited {
+    display: block;
+    @extend %contact-common;
+    color: $color-grey-dark-3;
+    text-decoration: none;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+
+  &__email-address:hover,
+  &__email-address:active {
+    transform: translate(1rem);
+  }
+}

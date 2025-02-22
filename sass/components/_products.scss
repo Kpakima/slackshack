@@ -1,0 +1,169 @@
+.products {
+  padding: 12rem 0rem;
+
+  @include bp-medium {
+    padding: 7rem 0rem;
+  }
+
+  &__product {
+    border: 1px solid $color-grey-light-3;
+    padding: 2.4rem;
+    border-radius: 10px;
+  }
+
+  &__img {
+    display: block;
+    max-width: 50%;
+    margin: 0 auto;
+  }
+
+  &__star {
+    height: 2rem;
+    width: 2rem;
+    fill: $color-primary;
+  }
+
+  &__price-icon {
+    height: 2rem;
+    width: 2rem;
+    fill: $color-primary;
+  }
+
+  &__cart-btn-icon {
+    height: 1.4rem;
+    width: 1.4rem;
+    transition: all 0.2s;
+  }
+
+  &__container {
+    @include centerContainer;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 4rem;
+    align-items: start;
+
+    @include bp-medium {
+      grid-gap: 2.5rem;
+    }
+  }
+
+  &__product-info-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  &__star-box {
+    line-height: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  &__name {
+    font-size: 1.8rem;
+    font-family: $font-heading;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  &__price {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1;
+    color: $color-primary;
+    display: flex;
+    align-items: center;
+
+    span {
+      margin-left: -4px;
+    }
+  }
+
+  &__discount-text {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1;
+    text-align: center;
+  }
+
+  &__cart-btn {
+    background: none;
+    font-size: 1.4rem;
+    padding: 1rem 1.6rem;
+    border: 1px solid $color-black;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: $color-grey-dark-3;
+      color: $color-white;
+      border: 1px solid transparent;
+    }
+  }
+
+  &__cart-btn:hover &__cart-btn-icon {
+    fill: $color-white;
+  }
+
+  &__categories {
+    width: 60%;
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+
+    @include bp-large {
+      flex-wrap: wrap;
+      align-content: center;
+      gap: 1rem;
+    }
+
+    @include bp-medium {
+      width: 90%;
+    }
+  }
+
+  &__category {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1;
+    padding: 0.8rem 2rem;
+    border-radius: 100px;
+    border: 1px solid currentColor;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      border: 1px solid transparent;
+      background-color: $color-grey-dark-3;
+      color: $color-white;
+    }
+
+    &:active {
+      border: 1px solid currentColor;
+      background-color: transparent;
+      color: $color-grey-dark-3;
+    }
+
+    &--active {
+      background-color: $color-primary;
+      color: $color-white;
+      border: 1px solid transparent;
+    }
+  }
+
+  &__btn {
+    font-size: 1.7rem;
+
+    @include bp-large {
+      font-size: 1.28rem;
+    }
+  }
+}

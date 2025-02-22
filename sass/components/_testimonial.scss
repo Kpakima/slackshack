@@ -1,0 +1,57 @@
+.testimonials {
+  padding: 12rem 0rem;
+  background-color: $color-grey-light-1;
+
+  @include bp-medium {
+    padding: 7rem 0rem;
+  }
+
+  &__container {
+    @include centerContainer;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 4rem;
+
+    @include bp-large {
+      grid-template-columns: 1fr;
+      grid-gap: 6rem;
+    }
+  }
+
+  &__testimonial {
+    padding: 2.4rem;
+    background-color: $color-white;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    position: relative;
+    z-index: 2;
+
+    &::before {
+      content: '\201C';
+      font-size: 30rem;
+      line-height: 1;
+      color: $color-grey-light-2;
+      position: absolute;
+      left: 0;
+      top: -4rem;
+      z-index: -1;
+    }
+  }
+
+  &__img {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+
+  &__name {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+}

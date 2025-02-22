@@ -1,0 +1,42 @@
+.news {
+  padding: 12rem 0rem;
+
+  @include bp-medium {
+    padding: 7rem 0rem;
+  }
+
+  &__img {
+    width: 100%;
+    display: block;
+  }
+
+  &__container {
+    @include centerContainer;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-gap: 6rem;
+
+    @include bp-medium {
+      grid-row-gap: 4rem;
+      grid-column-gap: 2.5rem;
+    }
+  }
+
+  &__info-box {
+    font-size: 1.6rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  &__text {
+  }
+}

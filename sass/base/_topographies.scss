@@ -1,0 +1,40 @@
+.heading-primary {
+  font-size: 5.4rem;
+  line-height: 1;
+  letter-spacing: -2px;
+  font-family: $font-heading, sans-serif;
+  font-weight: 600;
+  margin-bottom: 1.6rem;
+  background-image: linear-gradient(to left, $color-primary, $color-black);
+  display: inline-block;
+  background-clip: text;
+  color: transparent;
+
+  @include bp-large {
+    text-align: center;
+  }
+
+  @include bp-medium {
+    font-size: 4.4rem;
+  }
+
+  @include bp-small {
+    font-size: 4rem;
+  }
+}
+
+.heading-secondary {
+  font-size: 4.4rem;
+  font-family: $font-heading, sans-serif;
+  line-height: 1;
+  letter-spacing: -1.5px;
+  font-weight: 600;
+  background-image: linear-gradient(to left, $color-primary, $color-black);
+  display: inline-block;
+  background-clip: text;
+  color: transparent;
+
+  @include bp-medium {
+    font-size: 3rem;
+  }
+}

@@ -1,0 +1,227 @@
+.hero {
+  padding: 12rem 0rem;
+
+  @include bp-medium {
+    padding: 7rem 0rem;
+  }
+
+  &__container {
+    @include centerContainer;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8rem;
+
+    @include bp-largest {
+      gap: 6rem;
+    }
+
+    @include bp-large {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+  }
+
+  &__text-box {
+    align-content: center;
+    @include bp-large {
+      justify-items: center;
+    }
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 4.8rem;
+
+    @include bp-large {
+      text-align: center;
+    }
+  }
+
+  &__img-box {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    align-items: end;
+  }
+
+  &__img {
+    max-width: 100%;
+    transform: scale(1.1);
+
+    &--1 {
+      grid-column: 2 / -1;
+      grid-row: 1 / -1;
+      z-index: 1;
+    }
+
+    &--2 {
+      grid-column: 1 / 4;
+      grid-row: 1 / -1;
+      z-index: 2;
+    }
+  }
+}
+
+//////////////////////////////////
+// The category styles
+.category {
+  padding: 12rem 0rem;
+  background-color: $color-grey-light-1;
+
+  @include bp-medium {
+    padding: 7rem 0rem;
+  }
+
+  &__item {
+    flex: 1 0 0;
+    text-align: center;
+  }
+
+  &__img {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  &__container {
+    @include centerContainer;
+    display: flex;
+    justify-content: space-around;
+
+    @include bp-large {
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      align-content: center;
+    }
+  }
+
+  &__name {
+    display: block;
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1;
+  }
+
+  &__item {
+    padding: 2.4rem;
+    box-shadow: 0 2rem 6rem rgba($color-black, 0.1);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      box-shadow: 0 2rem 6rem rgba($color-black, 0.2);
+    }
+
+    &:active {
+      box-shadow: 0 2rem 6rem rgba($color-black, 0.1);
+    }
+  }
+}
+
+//////////////////////////////////
+// The about section styles
+.about {
+  padding: 12rem 0rem;
+
+  @include bp-medium {
+    padding: 7rem 0rem;
+  }
+
+  &__img {
+    max-width: 100%;
+  }
+
+  &__container {
+    @include centerContainer;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8rem;
+
+    @include bp-largest {
+      gap: 6rem;
+    }
+    @include bp-large {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__text-box {
+    font-size: 1.6rem;
+    align-content: center;
+  }
+
+  &__text {
+    font-weight: 400;
+    margin-bottom: 1.6rem;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 3.5rem;
+  }
+
+  &__list-item {
+    display: flex;
+    align-items: center;
+    &::before {
+      content: '';
+      height: 2rem;
+      width: 2rem;
+      display: inline-block;
+      margin-right: 0.5rem;
+
+      // background-image: url(../../img/check.svg);
+      // background-repeat: no-repeat;
+      // background-size: cover;
+      background-color: $color-primary;
+      -webkit-mask-image: url(../img/check.svg);
+      mask-image: url(../img/check.svg);
+      -webkit-mask-size: cover;
+      mask-size: cover;
+    }
+  }
+}
+
+//////////////////////////////////
+// The delivery section styles
+.delivery {
+  padding: 12rem 0rem;
+  background-color: $color-grey-light-1;
+
+  @include bp-medium {
+    padding: 7rem 0rem;
+  }
+
+  &__img {
+    max-width: 100%;
+  }
+
+  &__container {
+    @include centerContainer;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6rem;
+
+    @include bp-large {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include bp-medium {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__text-box {
+    align-content: center;
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+}
